@@ -1,0 +1,12 @@
+<div>
+    <h1 class="display-5 text-center">Lista Productos</h1>
+  </div>
+  <hr>
+  <table class="table table-hover">
+    <tr style="color: white;" *ngFor="let pd of serviceCrudD.list">
+      <td (click)="dataD.emit(pd)">{{pd.nombre}}</td>
+      <td (click)="dataD.emit(pd)">{{pd.precio}}</td>
+      <td (click)="dataD.emit(pd)">{{pd.cantidad}}</td>
+      <td (click)="dataD.emit(pd)">{{pd.descripcion}}</td>
+    </tr>
+  </table>

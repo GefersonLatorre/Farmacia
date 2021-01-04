@@ -1,0 +1,18 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand text-white">JWT Auth System</a>
+  <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+</nav>
+  <div class="row">
+    <div style="margin: 50px;" *ngIf="userDetails">
+      <ul class="list-group">
+        <li class="list-group-item"><strong>Username : </strong>{{userDetails.userName}}</li>
+        <li class="list-group-item"><strong>FullName : </strong>{{userDetails.fullName}}</li>
+        <li class="list-group-item"><strong>Email : </strong>{{userDetails.email}}</li>
+      </ul>
+    </div>
+    <div class="col-md-7">
+      <h1 class="display-4 text-center">{{text}}</h1>
+      <app-productos></app-productos>
+      <app-productos-list (dataD)="parentfuncD($event)"></app-productos-list>
+    </div>
+  </div>
